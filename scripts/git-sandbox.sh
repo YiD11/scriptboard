@@ -9,7 +9,7 @@ ga() {
   # 获取仓库根目录与名称（支持在子目录运行）
   root="$(git rev-parse --show-toplevel 2>/dev/null)" || return 1
   repo="$(basename "$root")"
-  path="../${repo}--${branch}"
+  path="../${branch}"
 
   # 创建或检出 Worktree
   if git show-ref --verify --quiet "refs/heads/$branch"; then
